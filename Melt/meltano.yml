@@ -1,0 +1,20 @@
+version: 1
+default_environment: dev
+project_id: 07a8a833-2e3e-4b1d-a76b-b64b8273b305
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  utilities:
+  - name: dbt-bigquery
+    variant: dbt-labs
+    pip_url: dbt-core dbt-bigquery meltano-dbt-ext~=0.3.0
+    config:
+      keyfile: stellar-verve-478012-n6-5c79fd657d1a.json
+      project: stellar-verve-478012-n6
+      dataset: dbt_dev
+    commands:
+      run-operation:
+        args: run-operation
+        description: Run a specific dbt operation macro

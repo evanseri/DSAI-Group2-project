@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: olist_raw
+    database: stellar-verve-478012-n6 # <--- Replace with your GCP Project ID
+    schema: olist_raw          # The dataset in BigQuery
+    loader: gcs_external
+    
+    tables:
+      # 1. Orders
+      - name: orders
+        description: "Raw orders data from GCS"
+        external:
+          location: "gs://dsai2-olist-raw-data/raw/olist/olist_orders_dataset.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+            allow_jagged_rows: true
+            quote: '"'
+
+      # 2. Customers (Repeat for other files in your screenshot)
+      - name: customers
+        external:
+          location: "gs://dsai2-olist-raw-data/raw/olist/olist_customers_dataset.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
