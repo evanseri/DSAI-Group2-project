@@ -25,3 +25,59 @@ sources:
           options:
             format: csv
             skip_leading_rows: 1
+      
+      # 3. Geolocation (Repeat for other files in your screenshot)
+      - name: geolocation
+        external:
+          location: "gs://dsai2-olist-raw-data/raw/olist/olist_geolocation_dataset.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      # 4. Order_items (Repeat for other files in your screenshot)
+      - name: order_items
+        external:
+          location: "gs://dsai2-olist-raw-data/raw/olist/olist_order_items_dataset.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      # 5. Payments (Repeat for other files in your screenshot)
+      - name: payments
+        external:
+          location: "gs://dsai2-olist-raw-data/raw/olist/olist_order_payments_dataset.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      # 6. Reviews (Repeat for other files in your screenshot)
+      - name: reviews
+        external:
+          location: "gs://dsai2-olist-raw-data/raw/olist/olist_order_reviews_dataset.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      # 7. Products (Repeat for other files in your screenshot)
+      - name: products
+        external:
+          location: "gs://dsai2-olist-raw-data/raw/olist/olist_products_dataset.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      # 8. Sellers (Repeat for other files in your screenshot)
+      - name: sellers
+        external:
+          location: "gs://dsai2-olist-raw-data/raw/olist/olist_sellers_dataset.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1
+
+      # 9. Product Category Name Translation (Repeat for other files in your screenshot)
+      - name: category_translation
+        external:
+          location: "gs://dsai2-olist-raw-data/raw/olist/product_category_name_translation.csv"
+          options:
+            format: csv
+            skip_leading_rows: 1

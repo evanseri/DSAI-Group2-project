@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: olist_raw
+    database: stellar-verve-478012-n6
+    schema: olist_raw # Where Meltano loaded the data
+    tables:
+      - name: orders
+      - name: order_items
+      - name: products
+      - name: customers
+      - name: sellers
+      - name: geolocation
+      - name: payments
+      - name: reviews
+      - name: category_translation
+
+      

@@ -36,10 +36,12 @@ dependencies:
     - pymongo==4.4.1
     - redis==4.6.0
     - fastavro==1.8.2
+    - google-cloud-bigquery
     
     # Utilities
     - great-expectations==1.4.1 
     - python-dotenv==1.1.0
     - thriftpy2==0.4.16
     - kaggle==1.5.13
-    - seaborn                   
+    - seaborn
+    - db-dtypes                  
