@@ -124,7 +124,7 @@ meltano:
       keyfile: /Users/IvanHan/DSAI-Group2-project/olist-group-2-8f8d5aa4ae8b.json
       threads: 1
       timeout_seconds: 300
-      location: US
+      location: asia-southeast1
       priority: interactive
 ```
 #### Verification
