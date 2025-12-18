@@ -358,48 +358,20 @@ Once you have created these 9 files, run the following command in your terminal 
 The results should be as below 
 
 ----
-15:14:48  1 of 9 START sql view model olist_raw.stg_customers ............................ [RUN]
-
-15:14:49  1 of 9 OK created sql view model olist_raw.stg_customers ....................... [CREATE VIEW (0 processed) in 1.49s]
-
-15:14:49  2 of 9 START sql view model olist_raw.stg_geolocation .......................... [RUN]
-
-15:14:51  2 of 9 OK created sql view model olist_raw.stg_geolocation ..................... [CREATE VIEW (0 processed) in 1.47s]
-
-15:14:51  3 of 9 START sql view model olist_raw.stg_order_items .......................... [RUN]
-
-15:14:52  3 of 9 OK created sql view model olist_raw.stg_order_items ..................... [CREATE VIEW (0 processed) in 1.43s]
-
-15:14:52  4 of 9 START sql view model olist_raw.stg_order_payments ....................... [RUN]
-
-15:14:54  4 of 9 OK created sql view model olist_raw.stg_order_payments .................. [CREATE VIEW (0 processed) in 1.43s]
-
-15:14:54  5 of 9 START sql view model olist_raw.stg_order_reviews ........................ [RUN]
-
-15:14:55  5 of 9 OK created sql view model olist_raw.stg_order_reviews ................... [CREATE VIEW (0 processed) in 1.43s]
-
-15:14:55  6 of 9 START sql view model olist_raw.stg_orders ............................... [RUN]
-
-15:14:57  6 of 9 OK created sql view model olist_raw.stg_orders .......................... [CREATE VIEW (0 processed) in 1.26s]
-
-15:14:57  7 of 9 START sql view model olist_raw.stg_product_category_name_translation .... [RUN]
-
-15:14:58  7 of 9 OK created sql view model olist_raw.stg_product_category_name_translation  [CREATE VIEW (0 processed) in 1.60s]
-
-15:14:58  8 of 9 START sql view model olist_raw.stg_products ............................. [RUN]
-
-15:15:00  8 of 9 OK created sql view model olist_raw.stg_products ........................ [CREATE VIEW (0 processed) in 1.45s]
-
-15:15:00  9 of 9 START sql view model olist_raw.stg_sellers .............................. [RUN]
-
-15:15:01  9 of 9 OK created sql view model olist_raw.stg_sellers ......................... [CREATE VIEW (0 processed) in 1.42s]
-
-15:15:01  
-15:15:01  Finished running 9 view models in 0 hours 0 minutes and 13.92 seconds (13.92s).
-15:15:01  
-15:15:01  Completed successfully
-15:15:01  
-15:15:01  Done. PASS=9 WARN=0 ERROR=0 SKIP=0 TOTAL=9
+13:26:46  1 of 4 START sql view model dbt_dev.stg_customers .............................. [RUN]
+13:26:47  1 of 4 OK created sql view model dbt_dev.stg_customers ......................... [CREATE VIEW (0 processed) in 1.08s]
+13:26:47  2 of 4 START sql view model dbt_dev.stg_order_payments ......................... [RUN]
+13:26:48  2 of 4 OK created sql view model dbt_dev.stg_order_payments .................... [CREATE VIEW (0 processed) in 1.09s]
+13:26:48  3 of 4 START sql view model dbt_dev.stg_product_category_name_translation ...... [RUN]
+13:26:50  3 of 4 OK created sql view model dbt_dev.stg_product_category_name_translation . [CREATE VIEW (0 processed) in 1.78s]
+13:26:50  4 of 4 START sql view model dbt_dev.stg_products ............................... [RUN]
+13:26:52  4 of 4 OK created sql view model dbt_dev.stg_products .......................... [CREATE VIEW (0 processed) in 1.85s]
+13:26:52
+13:26:52  Finished running 4 view models in 0 hours 0 minutes and 6.63 seconds (6.63s).
+13:26:52
+13:26:52  Completed successfully
+13:26:52
+13:26:52  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
 
 -----
 
