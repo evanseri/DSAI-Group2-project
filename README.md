@@ -254,7 +254,7 @@ sources:
 ```
 
 #### Run the load
-Fynally Run this command.  this will load the data to bigQuery
+Finally Run this command.  this will load the data to bigQuery
 
 `meltano invoke dbt-bigquery:run-operation stage_external_sources --args "{select: olist_raw}"`
 
@@ -280,8 +280,7 @@ Fynally Run this command.  this will load the data to bigQuery
 
 Response
 ----------
-`
-14:02:47  Setting up your profile.
+Setting up your profile.
 
 Which database would you like to use?
 [1] bigquery
@@ -290,7 +289,7 @@ Which database would you like to use?
 
 Enter a number: 1
 
-/Users/govindandhanasekaran/miniconda3/envs/prj/lib/python3.11/site-packages/google/cloud/aiplatform/models.py:52: FutureWarning: Support for google-cloud-storage < 3.0.0 will be removed in a future version of google-cloud-aiplatform. Please upgrade to google-cloud-storage >= 3.0.0.
+/Users/IvanHan/miniconda3/envs/prj/lib/python3.11/site-packages/google/cloud/aiplatform/models.py:52: FutureWarning: Support for google-cloud-storage < 3.0.0 will be removed in a future version of google-cloud-aiplatform. Please upgrade to google-cloud-storage >= 3.0.0.
 
   from google.cloud.aiplatform.utils import gcs_utils
 
@@ -300,7 +299,7 @@ Enter a number: 1
 
 Desired authentication method option (enter a number): 1
 
-project (GCP project id): stellar-verve-478012-n6
+project (GCP project id): olist-group-2
 
 dataset (the name of your dbt dataset): olist_raw
 
@@ -314,7 +313,7 @@ job_execution_timeout_seconds [300]:
 
 Desired location option (enter a number): 1
 
-14:06:18  Profile olist_analytics written to /Users/govindandhanasekaran/.dbt/profiles.yml using target's profile_template.yml and 
+14:06:18  Profile olist_analytics written to /Users/IvanHan/.dbt/profiles.yml using target's profile_template.yml and 
 your supplied values. Run 'dbt debug' to validate the connection.
 
 -----------
@@ -333,7 +332,7 @@ version: 2
 
 sources:
   - name: olist_raw
-    database: stellar-verve-478012-n6
+    database: olist-group-2 # <--- Replace with your GCP Project ID
     schema: olist_raw # Where Meltano loaded the data
     tables:
       - name: orders
@@ -377,6 +376,32 @@ The results should be as below
 
 ### Step 4: Create Dimension and fact Models (Marts Layer)
 Copy-paste the Sql below files in  .model\marts\ folder 
+
+Step 1: Create the marts Folder
+
+Open your Terminal (where your prj conda environment is active).
+Navigate to your dbt project's models directory:
+bash
+'''
+cd Melt/transform/models
+Create the marts folder:
+bash
+'''
+mkdir marts
+Verify: You can use ls to check:
+bash
+'''
+ls
+
+Step 2: Place Your Dimension and Fact Model Files
+
+Now that you have the marts folder, you'll place the SQL files for your dimension and fact models inside it.
+Navigate into the new marts folder:
+bash
+'''
+cd marts
+Create the SQL files for each of your dimension and fact models:
+
 
 ![alt text](image-1.png)
 
