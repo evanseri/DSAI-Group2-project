@@ -15,7 +15,7 @@ Prerequisites
 3. GCS Bucket: Create a bucket (e.g., my-olist-raw-data) in Google Cloud Storage.
 
 ### Creat a bucket in google cloud storage
-- bucketname:  dsai2-olist-raw-data
+- bucketname:  ecommerce-olist
 
   Grant acces  storage storage object admin using IAM
 
@@ -31,9 +31,9 @@ Prerequisites
    # --- CONFIGURATION ---
    KAGGLE_DATASET = "olistbr/brazilian-ecommerce"
    LOCAL_DOWNLOAD_PATH = "./temp_data"
-   GCS_BUCKET_NAME = "dsai2-olist-raw-data"    # Your GCS Bucket Name
-   GCS_DESTINATION_FOLDER = "raw/olist/"      # Folder inside the bucket
-   GCP_KEY_PATH = "stellar-verve-478012-n6-5c79fd657d1a.json"              # Path to your Service Account Key
+   GCS_BUCKET_NAME = "ecommerce-olist"    # Your GCS Bucket Name
+   GCS_DESTINATION_FOLDER = "raw/"      # Folder inside the bucket
+   GCP_KEY_PATH = "/Users/IvanHan/DSAI-Group2-project/olist-group-2-8f8d5aa4ae8b.json"              # Path to your Service Account Key
 ```
 
 
