@@ -181,7 +181,7 @@ sources:
       - name: orders
         description: "Raw orders data from GCS"
         external:
-          location: "gs://dsai2-olist-raw-data/raw/olist/olist_orders_dataset.csv"
+          location: "gs://olist-group-2/ecommerce_data/raw-orders.csv"
           options:
             format: csv
             skip_leading_rows: 1
