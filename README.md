@@ -108,8 +108,8 @@ models:
 Create transform/profiles/bigquery/profiles.yml( if not exists)
 
 Paste below content into transform/profiles/bigquery/profiles.yml:
-- Replace 'project: stellar-verve-478012-n6' With your bigquery project id
-- Replace "keyfile: /Users/govindandhanasekaran/Dev/Github/M2_PROJECT/stellar-verve-478012-n6-5c79fd657d1a.json"  With path of your google cloud key jason file
+- Replace 'project: olist-group-2' With your bigquery project id
+- Replace "keyfile: /Users/IvanHan/DSAI-Group2-project/olist-group-2-8f8d5aa4ae8b.json"  With path of your google cloud key json file
 ```
 # transform/profiles/bigquery/profiles.yml
 meltano:
@@ -119,9 +119,9 @@ meltano:
       type: bigquery
       method: service-account
       # These env_vars are standard for Meltano dbt-bigquery
-      project: stellar-verve-478012-n6
+      project: olist-group-2
       dataset: dbt_dev
-      keyfile: /Users/govindandhanasekaran/Dev/Github/M2_PROJECT/stellar-verve-478012-n6-5c79fd657d1a.json
+      keyfile: /Users/IvanHan/DSAI-Group2-project/olist-group-2-8f8d5aa4ae8b.json
       threads: 1
       timeout_seconds: 300
       location: US
@@ -142,9 +142,9 @@ Success Indicator: You should see a message saying: Installing dbt-labs/dbt_exte
 
 Update only below block in /Melt/meltano.yml
 
-Replace keyfile: stellar-verve-478012-n6-5c79fd657d1a.json with Google cloud keyfile 
+Replace keyfile: olist-group-2-8f8d5aa4ae8b.json with Google cloud keyfile 
 
-Repalce project: stellar-verve-478012-n6  with  your bigquery project
+Replace project: olist-group-2 with  your bigquery project
 
 ```
 ....
@@ -154,8 +154,8 @@ plugins:
     variant: dbt-labs
     pip_url: dbt-core dbt-bigquery meltano-dbt-ext~=0.3.0
     config:
-      keyfile: stellar-verve-478012-n6-5c79fd657d1a.json  ##<- Repalce your google cloud json
-      project: stellar-verve-478012-n6  ## <- Replace your bigquery project
+      keyfile: olist-group-2-8f8d5aa4ae8b.json  ##<- Replace your google cloud json
+      project: olist-group-2  ## <- Replace your bigquery project
       dataset: dbt_dev
     commands:
       run-operation:
@@ -172,7 +172,7 @@ version: 2
 
 sources:
   - name: olist_raw
-    database: stellar-verve-478012-n6 # <--- Replace with your GCP Project ID
+    database: olist-group-2 # <--- Replace with your GCP Project ID
     schema: olist_raw          # The dataset in BigQuery
     loader: gcs_external
     
@@ -191,7 +191,7 @@ sources:
       # 2. Customers (Repeat for other files in your screenshot)
       - name: customers
         external:
-          location: "gs://dsai2-olist-raw-data/raw/olist/olist_customers_dataset.csv"
+          location: "gs://olist-group-2/ecommerce_data/raw-customers.csv"
           options:
             format: csv
             skip_leading_rows: 1
@@ -199,7 +199,7 @@ sources:
       # 3. Geolocation (Repeat for other files in your screenshot)
       - name: geolocation
         external:
-          location: "gs://dsai2-olist-raw-data/raw/olist/olist_geolocation_dataset.csv"
+          location: "gs://olist-group-2/ecommerce_data/raw-geolocation.csv"
           options:
             format: csv
             skip_leading_rows: 1
@@ -207,7 +207,7 @@ sources:
       # 4. Order_items (Repeat for other files in your screenshot)
       - name: order_items
         external:
-          location: "gs://dsai2-olist-raw-data/raw/olist/olist_order_items_dataset.csv"
+          location: "gs://olist-group-2/ecommerce_data/raw-order_items.csv"
           options:
             format: csv
             skip_leading_rows: 1
@@ -215,7 +215,7 @@ sources:
       # 5. Payments (Repeat for other files in your screenshot)
       - name: payments
         external:
-          location: "gs://dsai2-olist-raw-data/raw/olist/olist_order_payments_dataset.csv"
+          location: "gs://olist-group-2/ecommerce_data/raw-payments.csv"
           options:
             format: csv
             skip_leading_rows: 1
@@ -223,7 +223,7 @@ sources:
       # 6. Reviews (Repeat for other files in your screenshot)
       - name: reviews
         external:
-          location: "gs://dsai2-olist-raw-data/raw/olist/olist_order_reviews_dataset.csv"
+          location: "gs://olist-group-2/ecommerce_data/raw-reviews.csv"
           options:
             format: csv
             skip_leading_rows: 1
@@ -231,7 +231,7 @@ sources:
       # 7. Products (Repeat for other files in your screenshot)
       - name: products
         external:
-          location: "gs://dsai2-olist-raw-data/raw/olist/olist_products_dataset.csv"
+          location: "gs://olist-group-2/ecommerce_data/raw-products.csv"
           options:
             format: csv
             skip_leading_rows: 1
@@ -239,7 +239,7 @@ sources:
       # 8. Sellers (Repeat for other files in your screenshot)
       - name: sellers
         external:
-          location: "gs://dsai2-olist-raw-data/raw/olist/olist_sellers_dataset.csv"
+          location: "gs://olist-group-2/ecommerce_data/raw-sellers.csv"
           options:
             format: csv
             skip_leading_rows: 1
@@ -247,7 +247,7 @@ sources:
       # 9. Product Category Name Translation (Repeat for other files in your screenshot)
       - name: category_translation
         external:
-          location: "gs://dsai2-olist-raw-data/raw/olist/product_category_name_translation.csv"
+          location: "gs://olist-group-2/ecommerce_data/raw-category_translation.csv"
           options:
             format: csv
             skip_leading_rows: 1
