@@ -173,7 +173,7 @@ version: 2
 sources:
   - name: olist_raw
     database: olist-group-2 # <--- Replace with your GCP Project ID
-    schema: olist_raw          # The dataset in BigQuery
+    schema: ecommerce_data          # The dataset in BigQuery
     loader: gcs_external
     
     tables:
