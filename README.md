@@ -885,3 +885,20 @@ with tab4:
 
 st.markdown("---")
 st.caption("Powered by BigQuery & Streamlit | Project: olist-group-2")
+
+#list of final commands the we have run after all the setup done 
+
+'''
+conda env update -f prj-environment.yml --prune
+conda activate prj
+python ingest_olist.py
+cd Melt
+meltano invoke dbt-bigquery:run-operation stage_external_sources --args "{select: olist_raw}"
+cd ..
+cd d ./dbt/olist_analytics/
+dbt run
+ccd ../..
+python bq_checks.py
+dashboard_rev2.py
+'''
+
